@@ -1,0 +1,38 @@
+server:
+  port: 1200
+spring:
+  application:
+    name: ps-future-travel-gateway
+  profiles:
+    active: @profileActive@
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848 # nacos地址
+        service: ${spring.application.name} # 服务名称
+        namespace: b17e27fa-835e-45c2-97a6-c20e03181315 # 命名空间
+    gateway:
+      discovery:
+        locator:
+          enabled: true # 使服务发现路由
+          lower-case-service-id: true # 服务名称全部为小写
+      routes:
+        - id: ps-future-travel-admin #路由的ID，没有固定规则但要求唯一，建议配合服务名
+          uri: lb://ps-future-travel-admin # 匹配后提供服务的路由地址
+          predicates:
+            - Path=/admin/** #路径匹配规则
+          filters:
+            - StripPrefix=1
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            # 允许携带认证信息
+            # 允许跨域的源(网站域名/ip)，设置*为全部
+            # 允许跨域请求里的head字段，设置*为全部
+            # 允许跨域的method， 默认为GET和OPTIONS，设置*为全部
+            # 跨域允许的有效期
+            allow-credentials: true
+            allowed-origins: "*"
+            allowed-headers: "*"
+            allowed-methods: "*"
+            max-age: 3600
