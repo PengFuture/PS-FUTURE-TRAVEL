@@ -11,7 +11,6 @@
         <module>ps-future-travel-support</module>
         <module>ps-future-travel-system</module>
         <module>ps-future-travel-orm</module>
-        <module>ps-future-travel-mybatis-plus</module>
     </modules>
 
     <packaging>pom</packaging>
