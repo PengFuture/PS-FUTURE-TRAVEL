@@ -11,6 +11,8 @@
 
     <artifactId>ps-future-travel-orm</artifactId>
 
+    <packaging>pom</packaging>
+
     <modules>
         <module>ps-future-travel-mybatis-plus</module>
     </modules>

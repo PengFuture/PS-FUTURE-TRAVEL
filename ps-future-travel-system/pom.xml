@@ -10,7 +10,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>ps-future-travel-system</artifactId>
+
     <packaging>pom</packaging>
+
     <modules>
         <module>ps-future-travel-admin</module>
     </modules>
