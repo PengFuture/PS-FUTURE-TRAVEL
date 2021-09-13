@@ -9,19 +9,11 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>ps-future-travel-system</artifactId>
-
-    <packaging>pom</packaging>
-
-    <modules>
-        <module>ps-future-travel-admin</module>
-        <module>ps-future-travel-system-common</module>
-    </modules>
+    <artifactId>ps-future-travel-common</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
-
 
 </project>

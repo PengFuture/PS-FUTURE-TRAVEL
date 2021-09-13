@@ -10,9 +10,9 @@ import org.springframework.cloud.context.config.annotation.RefreshScope;
  */
 @SpringCloudApplication
 @RefreshScope
-public class AdminApplication {
+public class SystemApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(AdminApplication.class, args);
+        SpringApplication.run(SystemApplication.class, args);
     }
 }

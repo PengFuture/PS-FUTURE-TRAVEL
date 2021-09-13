@@ -11,6 +11,7 @@
         <module>ps-future-travel-support</module>
         <module>ps-future-travel-system</module>
         <module>ps-future-travel-orm</module>
+        <module>ps-future-travel-common</module>
     </modules>
 
     <packaging>pom</packaging>
