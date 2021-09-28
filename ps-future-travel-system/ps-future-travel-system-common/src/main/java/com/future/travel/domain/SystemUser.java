@@ -3,11 +3,12 @@ package com.future.travel.domain;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.future.travel.api.CommonFieldMethod;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 
 /**
@@ -17,7 +18,7 @@ import java.time.LocalDate;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class SystemUser {
+public class SystemUser implements CommonFieldMethod {
 
     /**
      * 主键
@@ -47,11 +48,11 @@ public class SystemUser {
     /**
      * 创建时间
      */
-    private LocalDate createDateTime;
+    private LocalDateTime createDateTime;
     /**
      * 修改时间
      */
-    private LocalDate lastModifyTime;
+    private LocalDateTime lastModifyTime;
 
 
 }
